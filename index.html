@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="image" property="og:image" content="">
+    <meta name="author" content="Omid Amini">
+    <meta name="description" property="og:description" content="This single page application displays information about all the countries">
+    <title>Rest Countries App</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="home.css" />
+    <link rel="stylesheet" href="menu.css" />
+    <link rel="stylesheet" href="country-page.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <h3 class="title">Rest Countries app</h3>
+        <div id="theme" class="theme">
+          <img id="moon" class="moon" src="icons/moon-solid.svg" alt="" />
+          
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="home" class="home">
+        <div id="menu" class="menu">
+          <h2>Get infromation about the countries.</h2>
+          <div id="search-bar" class="search-bar">
+            <img
+              id="search-icon"
+              class="search-icon"
+              src="icons/search-solid.svg"
+              alt=""
+            />
+            <input
+              id="search"
+              class="search"
+              type="text"
+              placeholder="Search for a country..."
+            />
+          </div>
+          <div id="filter" class="filter">
+              <p>Filter By Region</p>
+            <div class="options">
+              <a class=" region all selected"id="all" data-value="All" onclick="selected('all')">All</a>
+              <a class="region asia" id="asia" data-value="Asia" onclick="selected('asia')">Asia</a>
+              <a class="region africa" id="africa" data-value="Africa" onclick="selected('africa')">Africa</a>
+              <a class="region europe" id="europe" data-value="Europe" onclick="selected('europe')">Europe</a>
+              <a class="region america" id="america" data-value="Americas" onclick="selected('america')">Americas</a>
+              <a class="region Oceania" id="Oceania" data-value="Oceania" onclick="selected('Oceania')">Oceania</a>
+              <a class="region polar" id="polar" data-value="Polar" onclick="selected('polar')">Polar</a>
+            </div>
+          </div>
+        </div>
+        <div class="loading">
+          <img
+            class="loading-icon"
+            src="icons/loadingIcon.gif"
+            alt="Loading..."
+          />
+        </div>
+        <div id="main"></div>
+      </div>
+      <div class="country-page" id="country-page">
+        <div class="country-information">
+          <div id="back-btn" class="back-btn">
+            <img id="arrow" src="icons/arrow-left-solid.svg" alt="" />
+            <span>Back</span>
+          </div>
+          <div class="main-container">
+            <img src="" alt="" id="big-flag" class="big-flag" />
+            <div class="detailed-details">
+              <h1 id="cn"></h1>
+              <div class="facts-and-figures">
+                <div class="col-1">
+                  <span class="col-1-span"></span
+                  ><span class="col-1-span"></span
+                  ><span class="col-1-span"></span
+                  ><span class="col-1-span"></span
+                  ><span class="col-1-span"></span>
+                </div>
+                <div class="col-2">
+                  <span class="col-2-span"></span
+                  ><span class="col-2-span"></span
+                  ><span class="col-2-span"></span>
+                </div>
+              </div>
+              <div id="border-countries" class="border-countries"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="app.js"></script>
+</html>
